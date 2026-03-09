@@ -10,5 +10,29 @@
     "assetTypes": ["agents"],
     "author": "msitarzewski",
     "license": "MIT"
+  },
+  {
+    "id": "github:anthropics/claude-plugins-official",
+    "name": "Claude Plugins Official",
+    "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "ref": "anthropics/claude-plugins-official",
+    "source": "github",
+    "homepage": "https://github.com/anthropics/claude-plugins-official",
+    "tags": ["claude-code", "mcp", "skills", "plugins"],
+    "assetTypes": ["plugins"],
+    "author": "anthropics",
+    "license": ""
+  },
+  {
+    "id": "github:coreyhaines31/marketingskills",
+    "name": "Marketing Skills",
+    "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+    "ref": "coreyhaines31/marketingskills",
+    "source": "github",
+    "homepage": "https://github.com/coreyhaines31/marketingskills",
+    "tags": ["claude", "codex", "marketing", "skills"],
+    "assetTypes": ["skills"],
+    "author": "coreyhaines31",
+    "license": "MIT"
   }
 ]
