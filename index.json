@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-10T18:14:55.665Z",
+  "updatedAt": "2026-03-11T00:14:15.966Z",
   "kits": [
     {
       "id": "github:msitarzewski/agency-agents",
@@ -20,6 +20,40 @@
       "author": "msitarzewski",
       "license": "MIT",
       "curated": true
+    },
+    {
+      "id": "npm:akm-cli",
+      "name": "akm-cli",
+      "description": "Placeholder — akm (the Agent-i-Kit) is coming soon. https://github.com/itlackey/agentikit",
+      "ref": "akm-cli",
+      "source": "npm",
+      "homepage": "https://github.com/itlackey/agentikit#readme",
+      "author": "itlackey",
+      "latestVersion": "0.0.0",
+      "tags": [
+        "agent-i-kit",
+        "ai-agent",
+        "cli",
+        "package-manager"
+      ],
+      "license": "MPL-2.0"
+    },
+    {
+      "id": "npm:akm-opencode",
+      "name": "akm-opencode",
+      "description": "Placeholder — akm (the Agent-i-Kit) is coming soon. https://github.com/itlackey/agentikit",
+      "ref": "akm-opencode",
+      "source": "npm",
+      "homepage": "https://github.com/itlackey/agentikit#readme",
+      "author": "itlackey",
+      "latestVersion": "0.0.0",
+      "tags": [
+        "agent-i-kit",
+        "ai-agent",
+        "cli",
+        "package-manager"
+      ],
+      "license": "MPL-2.0"
     },
     {
       "id": "github:anthropics/claude-plugins-official",
