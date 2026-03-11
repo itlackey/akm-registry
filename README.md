@@ -1,4 +1,4 @@
-# Agent-i-Kit Registry
+# Agent-i-Kit (akm) Registry
 
 Static registry index for [Agent-i-Kit](https://github.com/itlackey/agentikit) discovery. Powers `akm search --source registry` by providing a single JSON file that lists all known kits.
 
