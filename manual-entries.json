@@ -33,7 +33,7 @@
     "tags": ["azure", "skills", "cloud"],
     "assetTypes": ["skills"],
     "author": "microsoft",
-    "license": "MPL-2.0"
+    "license": "MIT"
   },
   {
     "id": "github:coreyhaines31/marketingskills",
