@@ -41,8 +41,8 @@ interface RegistryIndex {
 
 const GITHUB_API = "https://api.github.com"
 const NPM_REGISTRY = "https://registry.npmjs.org"
-const REQUIRED_KEYWORDS = ["agentikit", "akm"]
-const GITHUB_TOPICS = ["agentikit", "akm"]
+const REQUIRED_KEYWORDS = ["agentikit", "akm-kit"]
+const GITHUB_TOPICS = ["agentikit", "akm-kit"]
 const OUTPUT_PATH = path.join(import.meta.dir, "..", "index.json")
 const MANUAL_ENTRIES_PATH = path.join(import.meta.dir, "..", "manual-entries.json")
 
@@ -57,8 +57,9 @@ const EXCLUDED_NPM_PACKAGES = new Set([
   "agentikit",
   "agentikit-claude",
   "agentikit-opencode",
-  "@anthropic-ai/agentikit",
   "agentikit-plugins",
+  "akm-cli",
+  "akm-opencode",
 ])
 
 // ── GitHub helpers ──────────────────────────────────────────────────────────

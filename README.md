@@ -8,8 +8,8 @@ The `index.json` file is a static list of kits hosted on GitHub raw. The Agent-i
 
 A GitHub Actions workflow rebuilds the index every 6 hours by scanning:
 
-- **npm** for packages with `agentikit` or `akm` keywords
-- **GitHub** for repos with the `agentikit` topic
+- **npm** for packages with `agentikit` or `akm-kit` keywords
+- **GitHub** for repos with the `agentikit` or `akm-kit` topic
 - **manual-entries.json** for curated entries that should always be included
 
 Results are deduplicated, validated, and committed as `index.json`.
@@ -32,7 +32,7 @@ Publish to npm and the next index rebuild will pick it up.
 
 ### Option 2: GitHub topic (automatic)
 
-Add the `agentikit` topic to your GitHub repository (Settings > Topics). The scanner will find it on the next rebuild.
+Add the `agentikit` or `akm-kit` topic to your GitHub repository (Settings > Topics). The scanner will find it on the next rebuild.
 
 For richer metadata, include a `package.json` at the repo root with `keywords`, `description`, and optionally an `agentikit` field:
 
