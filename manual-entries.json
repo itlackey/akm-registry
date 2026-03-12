@@ -24,6 +24,18 @@
     "license": ""
   },
   {
+    "id": "github:microsoft/azure-skills",
+    "name": "Azure Skills",
+    "description": "Azure skills for AI agents.",
+    "ref": "microsoft/azure-skills",
+    "source": "github",
+    "homepage": "https://github.com/microsoft/azure-skills",
+    "tags": ["azure", "skills", "cloud"],
+    "assetTypes": ["skills"],
+    "author": "microsoft",
+    "license": "MPL-2.0"
+  },
+  {
     "id": "github:coreyhaines31/marketingskills",
     "name": "Marketing Skills",
     "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
