@@ -3,7 +3,7 @@
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 
-const AKM_CLI_VERSION = "0.0.22";
+const AKM_CLI_VERSION = "0.1.0";
 const repoRoot = path.resolve(import.meta.dir, "..");
 
 const result = spawnSync("bun", ["add", "--dev", "--exact", "--no-save", `akm-cli@${AKM_CLI_VERSION}`], {
