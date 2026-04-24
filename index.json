@@ -3,6 +3,32 @@
   "updatedAt": "2026-04-24T04:30:00.000Z",
   "kits": [
     {
+      "id": "github:itlackey/akm-stash",
+      "name": "AKM Stash",
+      "ref": "itlackey/akm-stash",
+      "source": "github",
+      "description": "Stash with AKM related assets such as skills, workflows, knowledge base articles.",
+      "homepage": "https://github.com/itlackey/akm-stash",
+      "tags": [
+        "akm",
+        "skills",
+        "workflows",
+        "knowledge",
+        "agents",
+        "commands"
+      ],
+      "assetTypes": [
+        "agent",
+        "command",
+        "knowledge",
+        "skill",
+        "workflow"
+      ],
+      "author": "itlackey",
+      "license": "MPL-2.0",
+      "curated": true
+    },
+    {
       "id": "github:msitarzewski/agency-agents",
       "name": "Agency Agents",
       "ref": "msitarzewski/agency-agents",

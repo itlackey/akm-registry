@@ -98,15 +98,6 @@ Supported `assetTypes` values match the CLI's current asset model:
 }
 ```
 
-The top-level `kits` array key is wire format fixed by the CLI and is
-intentionally **not** renamed; see
-[`TERMINOLOGY-MIGRATION.md`](./TERMINOLOGY-MIGRATION.md) for why.
-
-The schema lives at `scripts/registry-index.schema.json`.
-
-The local wrapper lives at `scripts/build-index.ts`, and the pinned CLI install
-is managed by `scripts/install-akm.ts` using `bun add --exact --no-save`.
-
 ## Configuring akm
 
 akm uses this registry by default. You can add or override registries with:
@@ -119,49 +110,12 @@ export AKM_REGISTRY_URL=https://your-company.com/registry/index.json
 
 In config, registries live under the `registries` array.
 
-## Local development
+## Official akm stash
+
+In addition to the registry, there is an official stash repo is installable as an akm stash:
 
 ```bash
-bun run install:akm
-bun run build
-bun run validate
-```
-
-The current pin is `akm-cli@0.0.22`, chosen as the next patch after
-`../agentikit/package.json`'s `0.0.21` while the CLI release for
-`akm registry build-index` is still in flight.
-
-## Bundled onboarding stash
-
-In addition to serving `index.json`, this repo is installable as an akm stash:
-
-```bash
-akm add github:itlackey/akm-registry
+akm add github:itlackey/akm-stash
 akm index
 akm show skill:akm-quickstart
 ```
-
-Layout:
-
-```
-skills/
-  akm-quickstart/SKILL.md        Bootstrap akm in a fresh environment.
-  install-akm-stash/SKILL.md     Install or clone a stash from npm/GitHub/git/local.
-  publish-akm-stash/SKILL.md     Publish a directory of assets as a discoverable stash.
-knowledge/
-  akm-overview.md                Working stash / source / registry and the nine asset types.
-  akm-cli-reference.md           Top-level CLI command reference (v0.5.0).
-  akm-stash-structure.md         Canonical stash layout and asset frontmatter.
-  akm-registry-schema.md         Registry index.json schema and manual-entry format.
-workflows/
-  publish-stash.md               End-to-end stash publishing workflow.
-  onboard-agent.md               Bootstrap a coding agent onto akm.
-commands/
-  akm-find.md                    Prompt template: ranked shortlist for a stated need.
-  akm-review-stash.md            Prompt template: evaluate a stash before install.
-agents/
-  akm-librarian.md               Read-only subagent that recommends akm assets.
-```
-
-These assets target the v0.5.0 release (2026-04-24), including the new
-first-class `workflow`, `wiki`, and `vault` asset types.
