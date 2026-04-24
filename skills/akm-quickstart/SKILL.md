@@ -1,16 +1,16 @@
 ---
 name: akm-quickstart
-description: Use when an agent needs to bootstrap akm (Agent Kit Manager) in a fresh environment — installs the CLI, initializes the stash, configures the registry, and verifies the toolchain before any install/search operations.
+description: Use when an agent needs to bootstrap akm (Agent Stash Manager) in a fresh environment — installs the CLI, initializes the stash, configures the registry, and verifies the toolchain before any install/search operations.
 ---
 
 # akm Quickstart
 
 This skill gets an agent from zero to a working akm installation so subsequent
-skills (`install-akm-kit`, `publish-akm-kit`) can run without setup errors.
+skills (`install-akm-stash`, `publish-akm-stash`) can run without setup errors.
 
 ## When to use
 
-- The user asks you to "use akm", "install a kit", "search for a skill", etc.,
+- The user asks you to "use akm", "install a stash", "search for a skill", etc.,
   and `akm` is not on PATH.
 - `akm info` or `akm --version` fails.
 - `~/akm` (the default stash) does not exist.
@@ -50,7 +50,7 @@ akm index      # build the local search index
 
 ```bash
 akm registry list
-akm registry search akm              # should return kits from itlackey/akm-registry
+akm registry search akm              # should return stashes from itlackey/akm-registry
 ```
 
 If the registry is empty, add the official one explicitly:
@@ -65,7 +65,7 @@ akm registry add https://raw.githubusercontent.com/itlackey/akm-registry/main/in
 akm info      # should show stash path, registry count >= 1, and index built
 ```
 
-Only proceed to kit install/search skills after this command succeeds.
+Only proceed to stash install/search skills after this command succeeds.
 
 ## Common failures
 

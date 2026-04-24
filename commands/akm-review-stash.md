@@ -1,13 +1,13 @@
 ---
-name: akm-review-kit
-description: Prompt template for reviewing a candidate akm kit before installing it — checks metadata quality, asset trigger sentences, license, and obvious red flags.
+name: akm-review-stash
+description: Prompt template for reviewing a candidate akm stash before installing it — checks metadata quality, asset trigger sentences, license, and obvious red flags.
 args:
   - name: ref
-    description: The kit or asset ref to review (e.g. github:owner/repo or npm:@scope/pkg).
+    description: The stash or asset ref to review (e.g. github:owner/repo or npm:@scope/pkg).
     required: true
 ---
 
-Review the akm kit at `{{args.ref}}` before the user installs it. Do not
+Review the akm stash at `{{args.ref}}` before the user installs it. Do not
 `akm add` it as part of this review.
 
 ## Inspect
@@ -16,19 +16,20 @@ Run these in order:
 
 ```bash
 akm registry search {{args.ref}}
-akm show {{args.ref}}                       # kit-level summary if supported
+akm show {{args.ref}}                       # stash-level summary if supported
 akm show {{args.ref}}//skill:<name>         # spot-check 1–2 individual assets
 ```
 
 If the ref is a GitHub repo, also fetch `README.md`, `LICENSE`, and any
-`package.json` / `akm.json` / `kit.json` at the repo root.
+`package.json` / `akm.json` / `stash.json` (legacy: `kit.json`) at the repo
+root.
 
 ## Evaluate
 
 Score each dimension and give ONE short justification per line:
 
-1. **Metadata quality** — Does the kit have a meaningful `description`, `tags`,
-   and `assetTypes`? Are they specific or generic?
+1. **Metadata quality** — Does the stash have a meaningful `description`,
+   `tags`, and `assetTypes`? Are they specific or generic?
 2. **Asset trigger sentences** — Do skills/agents/commands have
    "Use when …" frontmatter descriptions, or are they titles?
 3. **License clarity** — Is there a root LICENSE file? Is it a permissive /

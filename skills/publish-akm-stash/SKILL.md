@@ -1,26 +1,26 @@
 ---
-name: publish-akm-kit
-description: Use when the user wants to publish a new akm kit so it appears in the official registry — covers repo layout, required metadata, the three listing paths (npm keyword, GitHub topic, manual PR), and release verification.
+name: publish-akm-stash
+description: Use when the user wants to publish a new akm stash so it appears in the official registry — covers repo layout, required metadata, the three listing paths (npm keyword, GitHub topic, manual PR), and release verification.
 ---
 
-# Publish an akm Kit
+# Publish an akm Stash
 
 This skill walks an agent through turning a directory of assets into a
-discoverable kit listed by the official akm registry.
+discoverable stash listed by the official akm registry.
 
 ## When to use
 
-- "Make this folder of skills into an akm kit"
-- "Publish my kit to the akm registry"
+- "Make this folder of skills into an akm stash"
+- "Publish my stash to the akm registry"
 - "Add our repo to the akm index"
 
-## 1. Lay out the kit
+## 1. Lay out the stash
 
 akm classifies assets by file extension and content, not by directory name,
 but conventional directories sharply improve indexing confidence. Use them:
 
 ```
-my-kit/
+my-stash/
   README.md
   package.json            # optional, required only if publishing to npm
   scripts/                # *.sh *.ts *.py etc.
@@ -61,10 +61,10 @@ In `package.json`:
 
 ```json
 {
-  "name": "@your-org/your-kit",
+  "name": "@your-org/your-stash",
   "version": "0.1.0",
   "description": "Deployment skills and workflows",
-  "keywords": ["agentikit", "akm-kit"],
+  "keywords": ["akm-stash"],
   "files": ["skills", "commands", "agents", "knowledge", "workflows", "README.md"]
 }
 ```
@@ -72,11 +72,17 @@ In `package.json`:
 Publish: `npm publish --access public`. The official registry will pick it up
 on its next `akm registry build-index` run.
 
+> Until the CLI auto-discovery updates to `akm-stash` end-to-end, the
+> registry still also honors the legacy `akm-kit` / `agentikit` keyword. Use
+> `akm-stash` for new packages and expect a migration window. See
+> [`TERMINOLOGY-MIGRATION.md`](https://github.com/itlackey/akm-registry/blob/main/TERMINOLOGY-MIGRATION.md).
+
 ### Path B — GitHub topic (repo discovery)
 
-On the repo's **About** panel, add either the `agentikit` or `akm-kit` topic.
+On the repo's **About** panel, add the `akm-stash` topic.
 Make sure the repo has a clear README and a license. No other metadata is
-required.
+required. (Legacy topics `akm-kit` and `agentikit` are still honored during
+the migration window.)
 
 ### Path C — Manual entry (curated addition or override)
 
@@ -85,12 +91,12 @@ adding an object to `manual-entries.json`:
 
 ```json
 {
-  "id": "github:your-org/your-kit",
-  "name": "Your Kit",
-  "ref": "your-org/your-kit",
+  "id": "github:your-org/your-stash",
+  "name": "Your Stash",
+  "ref": "your-org/your-stash",
   "source": "github",
   "description": "One-line, agent-facing description",
-  "homepage": "https://github.com/your-org/your-kit",
+  "homepage": "https://github.com/your-org/your-stash",
   "tags": ["deploy", "fly"],
   "assetTypes": ["skill", "workflow"],
   "author": "your-org",
@@ -107,9 +113,9 @@ override auto-discovered metadata or list assets that aren't on npm/GitHub.
 After the registry rebuilds:
 
 ```bash
-akm registry search <your-kit-name>
+akm registry search <your-stash-name>
 akm add <your-ref>
-akm show <a-ref-from-your-kit>
+akm show <a-ref-from-your-stash>
 ```
 
 ## 5. Release hygiene

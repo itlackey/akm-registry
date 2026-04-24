@@ -5,13 +5,13 @@ steps:
   - id: install-cli
     title: Install the akm CLI and verify it is on PATH
   - id: init-stash
-    title: Initialize the stash and build the search index
+    title: Initialize the working stash and build the search index
     requires: [install-cli]
   - id: wire-plugin
     title: Wire the host agent's akm plugin (Claude Code / OpenCode / etc.)
     requires: [init-stash]
   - id: load-core-assets
-    title: Install the official onboarding kit (this registry)
+    title: Install the official onboarding stash (this registry)
     requires: [wire-plugin]
   - id: smoke-test
     title: Verify the agent can search, show, and run an asset
@@ -43,7 +43,7 @@ akm info
 If `akm` is not on PATH, add the global bin directory (e.g.
 `$(npm bin -g)` or `~/.bun/bin`) to `PATH`.
 
-## Step 2 — Initialize the stash and index
+## Step 2 — Initialize the working stash and index
 
 ```bash
 akm setup        # interactive: embeddings, default registry, first index build
@@ -65,7 +65,7 @@ exists and `akm search ""` returns (likely empty) results without error.
 Goal: the agent can call an `akm` tool (search / show / dispatch / run) from
 inside its turn, not just from a separate shell.
 
-## Step 4 — Install the official onboarding kit
+## Step 4 — Install the official onboarding stash
 
 The official registry (this repo) ships skills, knowledge, and workflows
 about using akm itself. Load them so the agent has a ready-made context:
@@ -77,7 +77,7 @@ akm show skill:akm-quickstart
 akm show knowledge:akm-overview
 ```
 
-Optionally install the plugins kit for your host:
+Optionally install the plugins stash for your host:
 
 ```bash
 akm add github:itlackey/akm-plugins
@@ -93,7 +93,7 @@ akm show knowledge:akm-cli-reference
 ```
 
 If all four commands succeed, the agent is onboarded. It can now use
-`skill:install-akm-kit` to add more kits as needs arise.
+`skill:install-akm-stash` to add more stashes as needs arise.
 
 ## Troubleshooting
 

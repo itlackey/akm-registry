@@ -2,7 +2,7 @@
   "name": "akm-registry",
   "version": "1.0.0",
   "private": true,
-  "description": "Static registry index for akm kit discovery",
+  "description": "Static registry index for akm stash discovery",
   "scripts": {
     "install:akm": "bun run scripts/install-akm.ts",
     "build": "bun run scripts/build-index.ts --out index.json",

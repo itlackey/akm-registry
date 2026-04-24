@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-04-24T03:30:00.000Z",
+  "updatedAt": "2026-04-24T04:00:00.000Z",
   "kits": [
     {
       "id": "github:msitarzewski/agency-agents",
@@ -46,10 +46,10 @@
     },
     {
       "id": "github:itlackey/akm-registry",
-      "name": "akm Official Onboarding Kit",
+      "name": "akm Official Onboarding Stash",
       "ref": "itlackey/akm-registry",
       "source": "github",
-      "description": "Use when an agent needs to learn or teach akm itself — ships skills, knowledge, workflows, commands, and a librarian subagent that cover install, search, kit authoring, and publishing against the official registry.",
+      "description": "Use when an agent needs to learn or teach akm itself — ships skills, knowledge, workflows, commands, and a librarian subagent that cover install, search, stash authoring, and publishing against the official registry.",
       "homepage": "https://github.com/itlackey/akm-registry",
       "tags": [
         "akm",
@@ -73,18 +73,18 @@
         },
         {
           "type": "skill",
-          "name": "install-akm-kit",
-          "description": "Install or clone an akm kit from npm, GitHub, git URL, or a local directory."
+          "name": "install-akm-stash",
+          "description": "Install or clone an akm stash from npm, GitHub, git URL, or a local directory."
         },
         {
           "type": "skill",
-          "name": "publish-akm-kit",
-          "description": "Publish a directory of assets as a discoverable akm kit."
+          "name": "publish-akm-stash",
+          "description": "Publish a directory of assets as a discoverable akm stash."
         },
         {
           "type": "knowledge",
           "name": "akm-overview",
-          "description": "High-level map of stash / source / registry and the nine asset types."
+          "description": "High-level map of working stash / source / registry and the nine asset types."
         },
         {
           "type": "knowledge",
@@ -93,8 +93,8 @@
         },
         {
           "type": "knowledge",
-          "name": "akm-kit-structure",
-          "description": "Canonical kit directory layout and asset frontmatter templates."
+          "name": "akm-stash-structure",
+          "description": "Canonical stash directory layout and asset frontmatter templates."
         },
         {
           "type": "knowledge",
@@ -103,8 +103,8 @@
         },
         {
           "type": "workflow",
-          "name": "publish-kit",
-          "description": "End-to-end workflow to publish and verify a new akm kit."
+          "name": "publish-stash",
+          "description": "End-to-end workflow to publish and verify a new akm stash."
         },
         {
           "type": "workflow",
@@ -118,8 +118,8 @@
         },
         {
           "type": "command",
-          "name": "akm-review-kit",
-          "description": "Prompt template to evaluate a candidate akm kit before install."
+          "name": "akm-review-stash",
+          "description": "Prompt template to evaluate a candidate akm stash before install."
         },
         {
           "type": "agent",

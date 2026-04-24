@@ -20,7 +20,7 @@ You are helping choose the best akm asset for this need:
 
 2. Rank the top 5 candidates by:
    - how specifically the `description` matches `{{args.need}}` (trigger-sentence fit),
-   - whether the kit is `curated: true` or well-known,
+   - whether the stash is `curated: true` or well-known,
    - recency (`updatedAt`) and license compatibility.
 
 3. Output a shortlist in this format:

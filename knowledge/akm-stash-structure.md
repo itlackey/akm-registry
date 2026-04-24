@@ -1,14 +1,14 @@
-# akm Kit Structure
+# akm Stash Structure
 
 akm classifies assets by **file extension and content**, not by directory
 name. You *can* put a shell script anywhere and it will still be recognized as
 a `script`. But conventional directories sharply improve indexing confidence
-and make kits legible to humans.
+and make stashes legible to humans.
 
 ## Canonical layout
 
 ```
-my-kit/
+my-stash/
 ├── README.md                         # orient humans and agents
 ├── LICENSE
 ├── package.json                      # optional (needed for npm publish)
@@ -121,17 +121,21 @@ State is tracked by `akm workflow start|next|complete`.
 
 ## Metadata hints
 
-Add an optional `akm.json` or `kit.json` at the root to give the registry
+Add an optional `akm.json` or `stash.json` at the root to give the registry
 extra context. When a manual-entries.json entry exists in the official
 registry, curated metadata there takes precedence.
 
+> Historical note: the file was originally proposed as `kit.json`. Both names
+> work today; prefer `akm.json` for new stashes. See
+> [`TERMINOLOGY-MIGRATION.md`](https://github.com/itlackey/akm-registry/blob/main/TERMINOLOGY-MIGRATION.md).
+
 ```json
 {
-  "name": "my-kit",
+  "name": "my-stash",
   "description": "Short, agent-facing description",
   "tags": ["deploy", "release"],
   "assetTypes": ["skill", "workflow", "command"],
-  "homepage": "https://github.com/your-org/my-kit"
+  "homepage": "https://github.com/your-org/my-stash"
 }
 ```
 
@@ -142,14 +146,17 @@ Pick at least one:
 **`package.json` (npm path)**
 ```json
 {
-  "name": "@your-org/my-kit",
-  "keywords": ["agentikit", "akm-kit"],
+  "name": "@your-org/my-stash",
+  "keywords": ["akm-stash"],
   "files": ["skills", "commands", "agents", "knowledge", "workflows", "README.md"]
 }
 ```
 
 **GitHub topics (repo path)**
-Add `agentikit` or `akm-kit` to the repo's topics.
+Add `akm-stash` to the repo's topics.
+
+> Legacy `akm-kit` and `agentikit` keywords/topics are still honored by the
+> registry auto-discovery during the migration window.
 
 **Manual entry (curated path)**
 Open a PR to `itlackey/akm-registry` updating `manual-entries.json`.
