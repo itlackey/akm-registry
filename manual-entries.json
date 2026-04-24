@@ -19,6 +19,116 @@
     "curated": true
   },
   {
+    "id": "github:itlackey/akm-plugins",
+    "name": "akm Plugins",
+    "description": "Official host-agent plugins for akm — Claude Code skill and dynamic dispatch, OpenCode tool registration, and an AGENTS.md drop-in for Codex/Cursor/Copilot/Qwen.",
+    "ref": "itlackey/akm-plugins",
+    "source": "github",
+    "homepage": "https://github.com/itlackey/akm-plugins",
+    "tags": [
+      "akm",
+      "plugins",
+      "claude-code",
+      "opencode",
+      "agents"
+    ],
+    "assetTypes": [
+      "skill",
+      "agent",
+      "command"
+    ],
+    "author": "itlackey",
+    "license": "MIT",
+    "curated": true
+  },
+  {
+    "id": "github:itlackey/akm-registry",
+    "name": "akm Official Onboarding Kit",
+    "description": "Use when an agent needs to learn or teach akm itself — ships skills, knowledge, workflows, commands, and a librarian subagent that cover install, search, kit authoring, and publishing against the official registry.",
+    "ref": "itlackey/akm-registry",
+    "source": "github",
+    "homepage": "https://github.com/itlackey/akm-registry",
+    "tags": [
+      "akm",
+      "onboarding",
+      "meta",
+      "registry",
+      "official"
+    ],
+    "assetTypes": [
+      "skill",
+      "knowledge",
+      "workflow",
+      "command",
+      "agent"
+    ],
+    "assets": [
+      {
+        "type": "skill",
+        "name": "akm-quickstart",
+        "description": "Bootstrap akm in a fresh environment — install CLI, init stash, verify registry."
+      },
+      {
+        "type": "skill",
+        "name": "install-akm-kit",
+        "description": "Install or clone an akm kit from npm, GitHub, git URL, or a local directory."
+      },
+      {
+        "type": "skill",
+        "name": "publish-akm-kit",
+        "description": "Publish a directory of assets as a discoverable akm kit."
+      },
+      {
+        "type": "knowledge",
+        "name": "akm-overview",
+        "description": "High-level map of stash / source / registry and the nine asset types."
+      },
+      {
+        "type": "knowledge",
+        "name": "akm-cli-reference",
+        "description": "Top-level akm CLI command reference (v0.5.0)."
+      },
+      {
+        "type": "knowledge",
+        "name": "akm-kit-structure",
+        "description": "Canonical kit directory layout and asset frontmatter templates."
+      },
+      {
+        "type": "knowledge",
+        "name": "akm-registry-schema",
+        "description": "Registry index.json schema and manual-entry format."
+      },
+      {
+        "type": "workflow",
+        "name": "publish-kit",
+        "description": "End-to-end workflow to publish and verify a new akm kit."
+      },
+      {
+        "type": "workflow",
+        "name": "onboard-agent",
+        "description": "Bootstrap a coding agent so it can discover, install, and run akm assets."
+      },
+      {
+        "type": "command",
+        "name": "akm-find",
+        "description": "Prompt template to produce a ranked shortlist of akm assets for a stated need."
+      },
+      {
+        "type": "command",
+        "name": "akm-review-kit",
+        "description": "Prompt template to evaluate a candidate akm kit before install."
+      },
+      {
+        "type": "agent",
+        "name": "akm-librarian",
+        "description": "Read-only subagent that finds and recommends akm assets for a task."
+      }
+    ],
+    "author": "itlackey",
+    "license": "MIT",
+    "curated": true
+  },
+  {
     "id": "github:microsoft/azure-skills",
     "name": "Azure Skills",
     "description": "Azure skills for AI agents.",

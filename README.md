@@ -1,8 +1,13 @@
 # akm Registry
 
-Static registry index for [akm](https://github.com/itlackey/agentikit) kit discovery.
+Static registry index for [akm](https://github.com/itlackey/akm) kit discovery.
 The CLI ships with this registry pre-configured and uses it for `akm registry search`
 and `akm search --source registry`.
+
+This repo is **also itself an akm kit** — the official onboarding kit. It
+ships skills, knowledge, workflows, commands, and a librarian subagent that
+teach agents how to discover, install, author, and publish akm assets. See
+[Bundled onboarding kit](#bundled-onboarding-kit) below.
 
 ## How it works
 
@@ -109,3 +114,38 @@ bun run validate
 The current pin is `akm-cli@0.0.22`, chosen as the next patch after
 `../agentikit/package.json`'s `0.0.21` while the CLI release for
 `akm registry build-index` is still in flight.
+
+## Bundled onboarding kit
+
+In addition to serving `index.json`, this repo is installable as an akm kit:
+
+```bash
+akm add github:itlackey/akm-registry
+akm index
+akm show skill:akm-quickstart
+```
+
+Layout:
+
+```
+skills/
+  akm-quickstart/SKILL.md        Bootstrap akm in a fresh environment.
+  install-akm-kit/SKILL.md       Install or clone a kit from npm/GitHub/git/local.
+  publish-akm-kit/SKILL.md       Publish a directory of assets as a discoverable kit.
+knowledge/
+  akm-overview.md                Stash / source / registry and the nine asset types.
+  akm-cli-reference.md           Top-level CLI command reference (v0.5.0).
+  akm-kit-structure.md           Canonical kit layout and asset frontmatter.
+  akm-registry-schema.md         Registry index.json schema and manual-entry format.
+workflows/
+  publish-kit.md                 End-to-end kit publishing workflow.
+  onboard-agent.md               Bootstrap a coding agent onto akm.
+commands/
+  akm-find.md                    Prompt template: ranked shortlist for a stated need.
+  akm-review-kit.md              Prompt template: evaluate a kit before install.
+agents/
+  akm-librarian.md               Read-only subagent that recommends akm assets.
+```
+
+These assets target the v0.5.0 release (2026-04-24), including the new
+first-class `workflow`, `wiki`, and `vault` asset types.
