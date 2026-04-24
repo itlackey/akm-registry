@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-04-24T04:00:00.000Z",
+  "updatedAt": "2026-04-24T04:30:00.000Z",
   "kits": [
     {
       "id": "github:msitarzewski/agency-agents",
@@ -18,116 +18,6 @@
         "agent"
       ],
       "author": "msitarzewski",
-      "license": "MIT",
-      "curated": true
-    },
-    {
-      "id": "github:itlackey/akm-plugins",
-      "name": "akm Plugins",
-      "ref": "itlackey/akm-plugins",
-      "source": "github",
-      "description": "Official host-agent plugins for akm — Claude Code skill and dynamic dispatch, OpenCode tool registration, and an AGENTS.md drop-in for Codex/Cursor/Copilot/Qwen.",
-      "homepage": "https://github.com/itlackey/akm-plugins",
-      "tags": [
-        "akm",
-        "plugins",
-        "claude-code",
-        "opencode",
-        "agents"
-      ],
-      "assetTypes": [
-        "skill",
-        "agent",
-        "command"
-      ],
-      "author": "itlackey",
-      "license": "MIT",
-      "curated": true
-    },
-    {
-      "id": "github:itlackey/akm-registry",
-      "name": "akm Official Onboarding Stash",
-      "ref": "itlackey/akm-registry",
-      "source": "github",
-      "description": "Use when an agent needs to learn or teach akm itself — ships skills, knowledge, workflows, commands, and a librarian subagent that cover install, search, stash authoring, and publishing against the official registry.",
-      "homepage": "https://github.com/itlackey/akm-registry",
-      "tags": [
-        "akm",
-        "onboarding",
-        "meta",
-        "registry",
-        "official"
-      ],
-      "assetTypes": [
-        "skill",
-        "knowledge",
-        "workflow",
-        "command",
-        "agent"
-      ],
-      "assets": [
-        {
-          "type": "skill",
-          "name": "akm-quickstart",
-          "description": "Bootstrap akm in a fresh environment — install CLI, init stash, verify registry."
-        },
-        {
-          "type": "skill",
-          "name": "install-akm-stash",
-          "description": "Install or clone an akm stash from npm, GitHub, git URL, or a local directory."
-        },
-        {
-          "type": "skill",
-          "name": "publish-akm-stash",
-          "description": "Publish a directory of assets as a discoverable akm stash."
-        },
-        {
-          "type": "knowledge",
-          "name": "akm-overview",
-          "description": "High-level map of working stash / source / registry and the nine asset types."
-        },
-        {
-          "type": "knowledge",
-          "name": "akm-cli-reference",
-          "description": "Top-level akm CLI command reference (v0.5.0)."
-        },
-        {
-          "type": "knowledge",
-          "name": "akm-stash-structure",
-          "description": "Canonical stash directory layout and asset frontmatter templates."
-        },
-        {
-          "type": "knowledge",
-          "name": "akm-registry-schema",
-          "description": "Registry index.json schema and manual-entry format."
-        },
-        {
-          "type": "workflow",
-          "name": "publish-stash",
-          "description": "End-to-end workflow to publish and verify a new akm stash."
-        },
-        {
-          "type": "workflow",
-          "name": "onboard-agent",
-          "description": "Bootstrap a coding agent so it can discover, install, and run akm assets."
-        },
-        {
-          "type": "command",
-          "name": "akm-find",
-          "description": "Prompt template to produce a ranked shortlist of akm assets for a stated need."
-        },
-        {
-          "type": "command",
-          "name": "akm-review-stash",
-          "description": "Prompt template to evaluate a candidate akm stash before install."
-        },
-        {
-          "type": "agent",
-          "name": "akm-librarian",
-          "description": "Read-only subagent that finds and recommends akm assets for a task."
-        }
-      ],
-      "author": "itlackey",
       "license": "MIT",
       "curated": true
     },
