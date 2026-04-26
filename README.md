@@ -4,17 +4,6 @@ Static registry index for [akm](https://github.com/itlackey/akm) stash discovery
 The CLI ships with this registry pre-configured and uses it for `akm registry search`
 and `akm search --source registry`.
 
-This repo is **also itself an akm stash** — the official onboarding stash. It
-ships skills, knowledge, workflows, commands, and a librarian subagent that
-teach agents how to discover, install, author, and publish akm assets. See
-[Bundled onboarding stash](#bundled-onboarding-stash) below.
-
-> **Terminology note.** Historically akm called a shareable directory of
-> assets a "kit." We've renamed that concept to "stash" across this repo.
-> The only remaining "kit" references are in places we don't control yet
-> (the CLI's wire format and auto-discovery topics) — tracked in
-> [`TERMINOLOGY-MIGRATION.md`](./TERMINOLOGY-MIGRATION.md).
-
 ## How it works
 
 This repo publishes a static `index.json` file. The akm CLI fetches and caches
@@ -30,13 +19,9 @@ CLI builds support:
 
 The build merges three sources:
 
-- npm packages with the `akm-stash` keyword *(new — see migration note)*
-- GitHub repos with the `akm-stash` topic *(new — see migration note)*
+- npm packages with the `akm-stash` keyword
+- GitHub repos with the `akm-stash` topic
 - `manual-entries.json` for curated additions and overrides
-
-> Until the CLI auto-discovery updates to the new topic/keyword names, the
-> merge also still honors the legacy `agentikit` and `akm-kit` topic /
-> keyword. Publishers should prefer `akm-stash` going forward.
 
 ## Getting listed
 
@@ -75,7 +60,7 @@ Supported `assetTypes` values match the CLI's current asset model:
 {
   "version": 2,
   "updatedAt": "2026-04-24T00:00:00Z",
-  "kits": [
+  "stashes": [
     {
       "id": "github:your-org/deploy-stash",
       "name": "deploy-stash",
