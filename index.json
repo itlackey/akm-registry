@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updatedAt": "2026-04-24T04:30:00.000Z",
+  "version": 3,
+  "updatedAt": "2026-05-04T13:44:26.378Z",
   "stashes": [
     {
       "id": "github:itlackey/akm-stash",
@@ -25,8 +25,7 @@
         "workflow"
       ],
       "author": "itlackey",
-      "license": "MPL-2.0",
-      "curated": true
+      "license": "MPL-2.0"
     },
     {
       "id": "github:msitarzewski/agency-agents",
@@ -44,8 +43,7 @@
         "agent"
       ],
       "author": "msitarzewski",
-      "license": "MIT",
-      "curated": true
+      "license": "MIT"
     },
     {
       "id": "github:microsoft/azure-skills",
@@ -63,8 +61,7 @@
         "skill"
       ],
       "author": "microsoft",
-      "license": "MIT",
-      "curated": true
+      "license": "MIT"
     },
     {
       "id": "github:anthropics/claude-plugins-official",
@@ -79,8 +76,7 @@
         "skills",
         "plugins"
       ],
-      "author": "anthropics",
-      "curated": true
+      "author": "anthropics"
     },
     {
       "id": "github:Databasin-AI/agent-plugins",
@@ -102,8 +98,7 @@
         "agent"
       ],
       "author": "Databasin-AI",
-      "license": "CC-BY-4.0",
-      "curated": true
+      "license": "CC-BY-4.0"
     },
     {
       "id": "github:coreyhaines31/marketingskills",
@@ -122,8 +117,7 @@
         "skill"
       ],
       "author": "coreyhaines31",
-      "license": "MIT",
-      "curated": true
+      "license": "MIT"
     }
   ]
 }
