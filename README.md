@@ -6,30 +6,26 @@ and `akm search --source registry`.
 
 ## How it works
 
-This repo publishes a static `index.json` file. The akm CLI fetches and caches
-that file locally, then searches it for matching stashes. The index is built
-here by a pinned `akm-cli` install via `akm registry build-index`. Current
-CLI builds support:
+This repo publishes a static `index.json` file. In akm v0.7.0, the official
+registry contract is the static-index provider backed by a v3 registry index.
+The CLI fetches and caches that file locally, then searches it for matching
+stashes. Current 0.7.0 support includes:
 
-- Registry index `version: 2`
+- Registry index `version: 3`
 - Auto-discovered stashes from npm and GitHub
-- Curated manual entries that can override or enrich discovered metadata
-- Optional asset-level metadata via each entry's `assets` array
+- `stashes[]` entries with required `id`, `name`, `ref`, `source`
+- Optional asset-level metadata via each entry's `assets` array for `akm registry search --assets`
 - Multiple configured registries via the `registries` config field
+- Forward-compatible extra fields, with the legacy `curated` boolean ignored and no longer published
 
-The build merges three sources:
-
-- npm packages with the `akm-stash` keyword
-- GitHub repos with the `akm-stash` topic
-- `manual-entries.json` for curated additions and overrides
+Supported `source` values in 0.7.0 are: `npm`, `github`, `git`, `local`.
 
 ## Getting listed
 
-There are three ways to get listed:
+There are two ways to get listed:
 
 - Publish an npm package with `akm-stash` in `keywords`
 - Add the `akm-stash` GitHub topic to your repository
-- Open a PR updating `manual-entries.json` for curated additions or overrides
 
 Manual entry example:
 
@@ -50,15 +46,27 @@ Manual entry example:
 
 Required fields: `id`, `name`, `ref`, `source`.
 
-Supported `assetTypes` values match the CLI's current asset model:
-`script`, `skill`, `command`, `agent`, `knowledge`, `workflow`, `wiki`,
-`vault`, `memory`.
+`assetTypes` should reflect the stash's published asset kinds. In 0.7.0 that
+includes the standard built-in kinds such as `script`, `skill`, `command`,
+`agent`, `knowledge`, `workflow`, `wiki`, `vault`, `memory`, and `lesson`.
+
+`assets` entries support:
+
+- `type` (required)
+- `name` (required)
+- `description` (optional)
+- `tags` (optional)
+- `estimatedTokens` (optional)
+
+The legacy top-level `curated` boolean used by older registry entries was
+removed before the 0.7.0 release. akm still ignores it for compatibility, but
+new registry data should omit it.
 
 ## Index format
 
 ```json
 {
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-04-24T00:00:00Z",
   "stashes": [
     {
@@ -69,15 +77,17 @@ Supported `assetTypes` values match the CLI's current asset model:
       "source": "github",
       "tags": ["deploy", "infrastructure"],
       "assetTypes": ["script", "skill"],
+      "latestVersion": "v1.2.0",
       "assets": [
         {
           "type": "script",
           "name": "deploy.sh",
-          "description": "Deploy to production"
+          "description": "Deploy to production",
+          "tags": ["deploy", "production"],
+          "estimatedTokens": 120
         }
       ],
-      "author": "your-org",
-      "curated": true
+      "author": "your-org"
     }
   ]
 }
