@@ -58,6 +58,9 @@ includes the standard built-in kinds such as `script`, `skill`, `command`,
 - `tags` (optional)
 - `estimatedTokens` (optional)
 
+Other optional stash-level fields supported in 0.7.0 include `description`,
+`homepage`, `tags`, `assetTypes`, `author`, `license`, and `latestVersion`.
+
 The legacy top-level `curated` boolean used by older registry entries was
 removed before the 0.7.0 release. akm still ignores it for compatibility, but
 new registry data should omit it.
