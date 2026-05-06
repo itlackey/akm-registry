@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": "2026-05-04T13:44:26.378Z",
+  "updatedAt": "2026-05-06T03:08:53.612Z",
   "stashes": [
     {
       "id": "github:itlackey/akm-stash",
@@ -117,6 +117,26 @@
         "skill"
       ],
       "author": "coreyhaines31",
+      "license": "MIT"
+    },
+    {
+      "id": "github:mattpocock/skills",
+      "name": "Matt Pocock's Skills",
+      "ref": "mattpocock/skills",
+      "source": "github",
+      "description": "Small, composable agent skills for real engineering - covering TDD, debugging, architecture, triage, and productivity workflows.",
+      "homepage": "https://github.com/mattpocock/skills",
+      "tags": [
+        "skills",
+        "engineering",
+        "productivity",
+        "tdd",
+        "agents"
+      ],
+      "assetTypes": [
+        "skill"
+      ],
+      "author": "mattpocock",
       "license": "MIT"
     }
   ]
