@@ -6,10 +6,10 @@ and `akm search --source registry`.
 
 ## How it works
 
-This repo publishes a static `index.json` file. In akm v0.7.0, the official
+This repo publishes a static `index.json` file. In akm v0.8.0, the official
 registry contract is the static-index provider backed by a v3 registry index.
 The CLI fetches and caches that file locally, then searches it for matching
-stashes. Current 0.7.0 support includes:
+stashes. Current 0.8.0 support includes:
 
 - Registry index `version: 3`
 - Auto-discovered stashes from npm and GitHub
@@ -18,7 +18,7 @@ stashes. Current 0.7.0 support includes:
 - Multiple configured registries via the `registries` config field
 - Forward-compatible extra fields, with the legacy `curated` boolean ignored and no longer published
 
-Supported `source` values in 0.7.0 are: `npm`, `github`, `git`, `local`.
+Supported `source` values in 0.8.0 are: `npm`, `github`, `git`, `local`.
 
 ## Getting listed
 
@@ -46,7 +46,7 @@ Manual entry example:
 
 Required fields: `id`, `name`, `ref`, `source`.
 
-`assetTypes` should reflect the stash's published asset kinds. In 0.7.0 that
+`assetTypes` should reflect the stash's published asset kinds. In 0.8.0 that
 includes the standard built-in kinds such as `script`, `skill`, `command`,
 `agent`, `knowledge`, `workflow`, `wiki`, `vault`, `memory`, and `lesson`.
 
@@ -58,7 +58,7 @@ includes the standard built-in kinds such as `script`, `skill`, `command`,
 - `tags` (optional)
 - `estimatedTokens` (optional)
 
-Other optional stash-level fields supported in 0.7.0 include `description`,
+Other optional stash-level fields supported in 0.8.0 include `description`,
 `homepage`, `tags`, `assetTypes`, `author`, `license`, and `latestVersion`.
 
 The legacy top-level `curated` boolean used by older registry entries was
@@ -110,10 +110,20 @@ In config, registries live under the `registries` array.
 
 ## Official akm stash
 
-In addition to the registry, there is an official stash repo is installable as an akm stash:
+In addition to the registry, the official stash is installable as an akm stash:
 
 ```bash
 akm add github:itlackey/akm-stash
 akm index
 akm show skill:akm-quickstart
 ```
+
+## Ecosystem
+
+| Repo | What it is |
+| --- | --- |
+| [itlackey/akm](https://github.com/itlackey/akm) | Core Agent Kit Manager CLI |
+| [itlackey/akm-stash](https://github.com/itlackey/akm-stash) | Official stash — ready-made skills, workflows, commands, and knowledge |
+| [itlackey/akm-plugins](https://github.com/itlackey/akm-plugins) | Optional editor and agent integrations (Claude Code, OpenCode) |
+| [itlackey/akm-bench](https://github.com/itlackey/akm-bench) | Benchmark harness for measuring agent performance with akm |
+| [itlackey/akm-eval](https://github.com/itlackey/akm-eval) | Eval framework for akm asset quality using authoritative upstream harnesses |
